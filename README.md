@@ -1,4 +1,4 @@
-# aamarPay Server
+# AamarPay Server
 
 ### **Directory Structure**
 
@@ -41,6 +41,10 @@ PAYMENT_VERIFY_URL="https://sandbox.aamarpay.com/api/v1/trxcheck/request.php"
 
 - **`DB_URL`**: The connection string for your MongoDB database.
 - **`PORT`**: The port on which the server will run.
+- **`SIGNATURE_KEY`**: Replace "your_signature_key" with your actual AamarPay signature key.
+- **`STORE_ID`**: Replace "your_store_id" with your actual AamarPay store ID.
+- **`PAYMENT_URL`**: The URL to which payment requests are sent in the AamarPay sandbox environment.
+- **`PAYMENT_VERIFY_URL`**: The URL to verify payment transactions in the AamarPay sandbox environment.
 
 ---
 
