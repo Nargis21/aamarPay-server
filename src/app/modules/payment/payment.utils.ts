@@ -27,3 +27,16 @@ export const initiatePayment = async (paymentData: any) => {
   });
   return response.data;
 };
+
+export const verifyPayment = async (transactionId: string) => {
+  const response = await axios.get(process.env.PAYMENT_VERIFY_URL!, {
+    params: {
+      store_id: process.env.STORE_ID,
+      signature_key: process.env.SIGNATURE_KEY,
+      type: "json",
+      request_id: transactionId,
+    },
+  });
+
+  return response.data;
+};

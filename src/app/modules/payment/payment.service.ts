@@ -1,10 +1,15 @@
 import orderModel from "../order/order.model";
+import { verifyPayment } from "./payment.utils";
 
 const confirmationService = async (transactionId: string) => {
-  const result = await orderModel.findOneAndUpdate(
-    { transactionId },
-    { paymentStatus: "Paid" }
-  );
+  const verifyResponse = await verifyPayment(transactionId);
+  let result;
+  if (verifyResponse.pay_status === "Successful") {
+    result = await orderModel.findOneAndUpdate(
+      { transactionId },
+      { paymentStatus: "Paid" }
+    );
+  }
 
   return result;
 };
