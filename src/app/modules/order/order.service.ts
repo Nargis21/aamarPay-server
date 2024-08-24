@@ -48,7 +48,7 @@ const createOrder = async (orderData: any) => {
   const paymentSession = await initiatePayment(paymentData);
   console.log(paymentSession);
 
-  return order;
+  return paymentSession;
 };
 
 export const orderService = {
