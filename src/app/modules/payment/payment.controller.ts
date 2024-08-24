@@ -2,11 +2,10 @@ import { Request, Response } from "express";
 import { paymentService } from "./payment.service";
 
 const confirmationController = async (req: Request, res: Response) => {
-  const { transactionId, status } = req.query;
+  const { transactionId } = req.query;
 
   const result = await paymentService.confirmationService(
-    transactionId as string,
-    status as string
+    transactionId as string
   );
   res.send(result);
 };
