@@ -1,8 +1,4 @@
-# Quick Order Server Starter
-
-The repository for server-side setup for a quick order system, designed specifically for educational purposes in the Next Level Web Development course. This project serves as a tutorial for integrating the AmarPay payment system into a server-side application.
-
----
+# aamarPay Server
 
 ### **Directory Structure**
 
@@ -37,6 +33,10 @@ Create a `.env` file in the root of your project directory with the following co
 ```plaintext
 DB_URL="YOUR MONGO URI"
 PORT=3000
+STORE_ID="aamarpaytest"
+SIGNATURE_KEY="dbb74894e82415a2f7ff0ec3a97e4183"
+PAYMENT_URL="https://sandbox.aamarpay.com/jsonpost.php"
+PAYMENT_VERIFY_URL="https://sandbox.aamarpay.com/api/v1/trxcheck/request.php"
 ```
 
 - **`DB_URL`**: The connection string for your MongoDB database.
@@ -51,13 +51,13 @@ To get started with this project, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Apollo-Level2-Web-Dev/quick-order-server-starter.git
+   git clone https://github.com/Nargis21/aamarPay-server.git
    ```
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd quick-order-server-starter
+   cd aamarPay-server
    ```
 
 3. **Install Dependencies:**
@@ -83,4 +83,3 @@ To get started with this project, follow these steps:
    The server will be available at `http://localhost:3000` (or your configured port).
 
 ---
-
